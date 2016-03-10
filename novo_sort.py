@@ -11,11 +11,9 @@ import sys
 import logging
 log = logging.getLogger( __name__ )
 
-def novo_sort( output_filename ):
+def novo_sort( bam_filename ):
     #novosort -c 8 -m 8G -s-f $i > $i".sorted"; done
-    
-    param = r'@RG\tID:readgroup\tPU:platform unit\tLB:library'
-    cmdline_str = "novosort -c 8 -m 8G -s -f {} > {}.sorted".format( output_filename )
+    cmdline_str = "novosort -c 8 -m 8G -s -f {}".format( bam_filename )
     cmdline = newSplit(cmdline_str)
     try:
         check_call(cmdline)
@@ -32,8 +30,9 @@ def newSplit(value):
 def main():
     parser = argparse.ArgumentParser(description="Generate a BAM file from the Novo Align tool")
     parser.add_argument('output_filename')
+    parser.add_argument('--bam_filename')
     args = parser.parse_args()
    
-    novo_sort(args.output_filename)
+    novo_sort(args.bam_filename)
 
 if __name__ == "__main__": main()

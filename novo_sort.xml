@@ -9,14 +9,10 @@
         <exit_code range="1:" />
     </stdio>
     <command interpreter="python">
-        novo_sort.py '${out_file}' 
+        novo_sort.py '${out_file}' --bam_filename ${input1}
     </command>
     <inputs>
-        <param name="fastq_input1" type="data" format="fasta, fastq, fastsanger" label="Select first set of reads" help="Specify dataset with forward reads"/>
-        <param name="fastq_input2" type="data" format="fasta, fastq, fastsanger" label="Select second set of reads" help="Specify dataset with reverse reads"/>
-        <param name="index1" type="select" label="Novo-Sort Index(FASTA format)">
-            <options from_data_table="novocraft_index"/>
-        </param>
+        <param name="input1" type="data" format="bam" label="Select first set of reads" help="Specify dataset with forward reads"/>
     </inputs>
     <outputs>
         <data format="bam" name="out_file" />
