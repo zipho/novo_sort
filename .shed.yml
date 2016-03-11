@@ -1,9 +1,9 @@
 categories:
 - Fasta Manipulation
-description: Tool designed for mapping of short reads onto a reference genome from Illumina, Ion Torrent, and 454 NGS platforms.
+description: Custom designed multi-threaded sort/merge tools for BAM files.
 long_description: |
-   Powerful tool designed for mapping of short reads onto a reference genome from Illumina, Ion Torrent, and 454 NGS platforms.
-name: novo_align
+   Powerful custom designed multi-threaded sort/merge tools for BAM files.
+name: novo_sort
 owner: sanbi-uwc
-remote_repository_url: https://github.com/zipho/novo_align
+remote_repository_url: https://github.com/zipho/novo_sort
 type: unrestricted
