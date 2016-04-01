@@ -24,6 +24,7 @@ def newSplit(value):
 
 def main():
     parser = argparse.ArgumentParser(description="Re-sorting aligned files by read position")
+    parser.add_argument('output_filename')
     parser.add_argument('--bam_filename')
     args = parser.parse_args()
    

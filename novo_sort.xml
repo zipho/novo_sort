@@ -10,7 +10,7 @@
         <exit_code range="1:" />
     </stdio>
     <command interpreter="python">
-        novo_sort.py --bam_filename ${input1}
+        novo_sort.py '${out_file}' --bam_filename ${input1}
     </command>
     <inputs>
         <param name="input1" type="data" format="bam" label="Select first set of reads" help="Specify dataset with forward reads"/>
