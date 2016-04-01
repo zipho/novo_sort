@@ -8,7 +8,7 @@ import logging
 log = logging.getLogger( __name__ )
 
 def novo_sort( bam_filename, output_filename ):
-    cmdline_str = "novosort -c 8 -m 8G -s -f {} > {}".format( bam_filename, output_filename )
+    cmdline_str = "novosort -c 8 -m 8G -s -f {} -o {}".format( bam_filename, output_filename )
     cmdline = newSplit(cmdline_str)
     try:
         check_call(cmdline)
