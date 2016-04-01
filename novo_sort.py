@@ -28,6 +28,6 @@ def main():
     parser.add_argument('--bam_filename')
     args = parser.parse_args()
    
-    novo_sort(args.bam_filename, output_filename)
+    novo_sort(args.bam_filename, args.output_filename)
 
 if __name__ == "__main__": main()
