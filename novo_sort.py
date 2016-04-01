@@ -7,8 +7,8 @@ import sys
 import logging
 log = logging.getLogger( __name__ )
 
-def novo_sort( bam_filename ):
-    cmdline_str = "novosort -c 8 -m 8G -s -f {}".format( bam_filename )
+def novo_sort( bam_filename, output_filename ):
+    cmdline_str = "novosort -c 8 -m 8G -s -f {} > {}".format( bam_filename, output_filename )
     cmdline = newSplit(cmdline_str)
     try:
         check_call(cmdline)
@@ -28,6 +28,6 @@ def main():
     parser.add_argument('--bam_filename')
     args = parser.parse_args()
    
-    novo_sort(args.bam_filename)
+    novo_sort(args.bam_filename, output_filename)
 
 if __name__ == "__main__": main()
